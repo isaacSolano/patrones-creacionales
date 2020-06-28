@@ -1,0 +1,34 @@
+<main class="container">
+	<section class="row my-4">
+		<h1 class="col-md-12 text-center">{{ title }}</h1>
+		<h2 class="col-md-12 text-center">Seleccione el triangulo que desea crear</h2>
+	</section>
+
+	<section class="row">
+		<button class="btn btn-primary col-md-2 mx-auto" *ngFor="let triangulo of triangulosDisponibles | keyvalue" (click)="procesarOpcion(triangulo.value)">{{ triangulo.key }}</button>
+	</section>
+	
+	<table class="table text-center my-5">
+		<thead>
+			<tr>
+				<th>Tipo</th>
+				<th>Medida de su lado A</th>
+				<th>Medida de su lado B</th>
+				<th>Medida de su lado C</th>
+				<th>Dibujo</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr *ngFor="let triangulo of obtenerInfoTriangulos()">
+				<td>{{ triangulo.getNombre() }}</td>
+				<td>{{ triangulo.getLadoA() }}</td>
+				<td>{{ triangulo.getLadoB() }}</td>
+				<td>{{ triangulo.getLadoC() }}</td>
+				<td>
+					<img src="../assets/{{ triangulo.dibujar() }}" alt="Imagen triangulo" width="10%">
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</main>

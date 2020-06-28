@@ -1,16 +1,46 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FabricaAbstractaComponent } from './fabrica-abstracta/fabrica-abstracta.component';
+import { MetodoFabricaComponent } from './metodo-fabrica/metodo-fabrica.component';
+import { ConstructorComponent } from './constructor/constructor.component';
+import { PrototipoComponent } from './prototipo/prototipo.component';
+
+const routes = [
+  {
+    path: 'fabricaAbstracta',
+    component: FabricaAbstractaComponent
+  },
+  {
+    path: 'metodoFabrica',
+    component: MetodoFabricaComponent
+  },
+  {
+    path: 'prototipo',
+    component: PrototipoComponent
+  },
+  {
+    path: 'constructor',
+    component: ConstructorComponent
+  }
+]
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FabricaAbstractaComponent,
+    MetodoFabricaComponent,
+    ConstructorComponent,
+    PrototipoComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RouterModule.forRoot( routes, {
+      anchorScrolling: 'enabled'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

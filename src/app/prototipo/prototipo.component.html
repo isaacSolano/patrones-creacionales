@@ -1,0 +1,49 @@
+<main class="container">
+	<section class="row my-4">
+		<h1 class="col-md-12 text-center">
+			{{ title }}
+		</h1>
+		<h2 class="col-md-12 text-center">Accione el boton para crear camisetas</h2>
+	</section>
+
+	<section class="row">
+		<button class="btn btn-primary col-md-2 mx-auto" (click)="crearCamisetas()">Crear camisetas</button>
+	</section>
+
+	<section class="row my-4">
+		<ul class="list-group list-group-horizontal mx-auto">
+			<li class="list-group-item" *ngFor="let prototipo of arrPrototipos">
+				<p>
+					<span class="font-weight-bolder">Tipo de manga: </span>{{ prototipo.Manga }}
+				</p>
+				<p>
+					<span class="font-weight-bolder">Talla: </span>{{ prototipo.Talla }}
+				</p>
+				<p>
+					<span class="font-weight-bolder">Descripcion: </span>{{ prototipo.Descripcion }}
+				</p>
+			</li>
+		</ul>
+	</section>
+
+	<section class="row my-4">
+		<table class="table text-center">
+			<thead>
+				<tr>
+					<th>Numero de serie</th>
+					<th>Tipo de manga</th>
+					<th>Talla</th>
+					<th>Descripcion</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let camiseta of arrCamisetasCreadas">
+					<td>{{ camiseta.Serie }}</td>
+					<td>{{ camiseta.Manga }}</td>
+					<td>{{ camiseta.Talla }}</td>
+					<td>{{ camiseta.Descripcion }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+</main>

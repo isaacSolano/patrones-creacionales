@@ -1,0 +1,30 @@
+<main class="container">
+	<section class="row text-center my-4">
+		<h1 class="col-md-12">{{ title }}</h1>
+		<h3 class="col-md-12">Seleccione el vehiculo que desea</h3>
+	</section>
+
+	<section class="row my-2">
+		<button class="btn btn-primary col-md-2 mx-auto" (click)="procesarOpcion(transporte.toLowerCase())" *ngFor="let transporte of transportes">{{ transporte }}</button>
+	</section>
+
+	<section class="row my-4">
+		<h3 class="mx-auto my-4">Lista de vehiculos creados:</h3>
+
+		<table class="table text-center">
+			<thead>
+				<tr>
+					<th>Tipo</th>
+					<th>Codigo</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr *ngFor="let vehiculo of vehiculosCreados">
+					<td>{{ vehiculo.getTipo() }}</td>
+					<td>{{ vehiculo.obtenerCodigo() }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+</main>
