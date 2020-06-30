@@ -7,11 +7,12 @@ import { Router } from '@angular/router';
 	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-	title = 'Patrones Creacionales';
+	title = 'Patrones de diseno';
 	patrones = {
 		"Constructor": "/constructor",
 		"Fabrica Abstracta": "/fabricaAbstracta",
 		"Metodo Fabrica": "/metodoFabrica",
-		"Prototipo": "/prototipo"
+		"Prototipo": "/prototipo",
+		"Adaptador": "/adaptador"
 	};
 }

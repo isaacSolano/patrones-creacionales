@@ -8,6 +8,7 @@ import { FabricaAbstractaComponent } from './fabrica-abstracta/fabrica-abstracta
 import { MetodoFabricaComponent } from './metodo-fabrica/metodo-fabrica.component';
 import { ConstructorComponent } from './constructor/constructor.component';
 import { PrototipoComponent } from './prototipo/prototipo.component';
+import { AdaptadorComponent } from './adaptador/adaptador.component';
 
 const routes = [
   {
@@ -25,6 +26,10 @@ const routes = [
   {
     path: 'constructor',
     component: ConstructorComponent
+  },
+  {
+    path: 'adaptador',
+    component: AdaptadorComponent
   }
 ]
 
@@ -35,6 +40,7 @@ const routes = [
     MetodoFabricaComponent,
     ConstructorComponent,
     PrototipoComponent,
+    AdaptadorComponent,
   ],
   imports: [
     BrowserModule,
