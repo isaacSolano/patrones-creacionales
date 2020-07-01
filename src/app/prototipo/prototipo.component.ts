@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 import { Gestor } from "./Gestor";
 
 @Component({
-  selector: 'app-prototipo',
-  templateUrl: './prototipo.component.html',
-  styleUrls: ['./prototipo.component.scss']
+  selector: "app-prototipo",
+  templateUrl: "./prototipo.component.html",
+  styleUrls: ["./prototipo.component.scss"]
 })
 export class PrototipoComponent implements OnInit {
 
@@ -14,7 +14,7 @@ export class PrototipoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  title = 'Creador de camisetas | Prototipo';
+  title = "Creador de camisetas | Prototipo";
 	gestor:Gestor;
 	arrCamisetasCreadas:Array<Object> = [];
 	arrPrototipos:Array<Object> = [];

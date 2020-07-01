@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { FabricaAbstractaComponent } from './fabrica-abstracta.component';
+import { FabricaAbstractaComponent } from "./fabrica-abstracta.component";
 
-describe('FabricaAbstractaComponent', () => {
+describe("FabricaAbstractaComponent", () => {
   let component: FabricaAbstractaComponent;
   let fixture: ComponentFixture<FabricaAbstractaComponent>;
 
@@ -19,7 +19,7 @@ describe('FabricaAbstractaComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

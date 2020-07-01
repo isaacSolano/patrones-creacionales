@@ -1,5 +1,5 @@
-import { Motor } from '../Objetos/Motor';
-import { MotorPlasma } from '../Objetos/MotorPlasma';
+import { Motor } from "../Objetos/Motor";
+import { MotorPlasma } from "../Objetos/MotorPlasma";
 
 export class MotorPlasmaAdapter extends Motor{
     private motorPlasma:MotorPlasma;

@@ -1,5 +1,5 @@
 import { Camiseta } from "../iPrototipo/Camiseta";
-import { Franela } from '../Material/Franela';
+import { Franela } from "../Material/Franela";
 
 export class Camiseta_Manga_Larga extends Camiseta{
     constructor(pId:Number, pTalla:String, pColor:String, pEstampado:String){

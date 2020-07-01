@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
-import { Gestor } from './Gestor';
+import { Gestor } from "./Gestor";
 
 @Component({
-	selector: 'app-adaptador',
-	templateUrl: './adaptador.component.html',
-	styleUrls: ['./adaptador.component.scss']
+	selector: "app-adaptador",
+	templateUrl: "./adaptador.component.html",
+	styleUrls: ["./adaptador.component.scss"]
 })
 export class AdaptadorComponent implements OnInit {
 	constructor() { }
@@ -13,7 +13,7 @@ export class AdaptadorComponent implements OnInit {
 	ngOnInit(): void {
 	}
 
-	title:String = 'Creador de motores | Adaptador';
+	title:String = "Creador de motores | Adaptador";
 	motoresDisponibles:any = {
 		"Motor comun": 1,
 		"Motor economico": 2,

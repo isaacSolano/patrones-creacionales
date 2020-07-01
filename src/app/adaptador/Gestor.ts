@@ -1,9 +1,9 @@
-import { Motor } from './Adaptador/Objetos/Motor';
-import { MotorComun } from './Adaptador/Objetos/MotorComun';
-import { MotorElectrico } from './Adaptador/Objetos/MotorElectrico';
-import { MotorEconomico } from './Adaptador/Objetos/MotorEconomico';
-import { MotorElectricoAdapter } from './Adaptador/Adaptadores/MotorElectricoAdapter';
-import { MotorPlasmaAdapter } from './Adaptador/Adaptadores/MotorPlasmaAdapter';
+import { Motor } from "./Adaptador/Objetos/Motor";
+import { MotorComun } from "./Adaptador/Objetos/MotorComun";
+import { MotorElectrico } from "./Adaptador/Objetos/MotorElectrico";
+import { MotorEconomico } from "./Adaptador/Objetos/MotorEconomico";
+import { MotorElectricoAdapter } from "./Adaptador/Adaptadores/MotorElectricoAdapter";
+import { MotorPlasmaAdapter } from "./Adaptador/Adaptadores/MotorPlasmaAdapter";
 
 export class Gestor{
     private arrMotoresCreados:Array<Motor> = [];

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 import { Vehiculo } from "./Factory/Producto_Abstracto/Vehiculo";
 import { Fabrica_Abstracta } from "./Factory/Fabrica_Abstracta/Fabrica_Abstracta";
@@ -9,9 +9,9 @@ import { Fabrica_Uber } from "./Factory/Fabrica_Concreta/Fabrica_Uber";
 import { Fabrica_Avion } from "./Factory/Fabrica_Concreta/Fabrica_Avion";
 
 @Component({
-  selector: 'app-fabrica-abstracta',
-  templateUrl: './fabrica-abstracta.component.html',
-  styleUrls: ['./fabrica-abstracta.component.scss']
+  selector: "app-fabrica-abstracta",
+  templateUrl: "./fabrica-abstracta.component.html",
+  styleUrls: ["./fabrica-abstracta.component.scss"]
 })
 export class FabricaAbstractaComponent implements OnInit {
 
@@ -20,9 +20,9 @@ export class FabricaAbstractaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  title:String = 'Creador de Vehiculos | Fabrica Abstracta';
+  title:String = "Creador de Vehiculos | Fabrica Abstracta";
   sMensaje:String;
-  transportes:any = ['Taxi', 'Bus', 'Uber', 'Avion'];
+  transportes:any = ["Taxi", "Bus", "Uber", "Avion"];
   vehiculosCreados:Vehiculo[] = [];
 
 

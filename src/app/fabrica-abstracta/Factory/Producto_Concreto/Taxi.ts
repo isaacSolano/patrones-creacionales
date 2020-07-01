@@ -1,4 +1,4 @@
-import { Vehiculo } from '../Producto_Abstracto/Vehiculo';
+import { Vehiculo } from "../Producto_Abstracto/Vehiculo";
 
 export class Taxi implements Vehiculo{
     private codigo:Number;

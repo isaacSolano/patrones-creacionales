@@ -5,7 +5,7 @@
 
 
 	<section class="row mt-1 mb-5">
-		<button class="btn btn-primary col-md-2 mx-auto" *ngFor="let patron of patrones | keyvalue" [routerLink]="[ patron.value ]">{{ patron.key }}</button>
+		<button class="btn btn-primary mx-auto" *ngFor="let patron of patrones | keyvalue" [routerLink]="[ patron.value ]">{{ patron.key }}</button>
 	</section>
 </main>
 

@@ -1,5 +1,5 @@
-import { Motor } from '../Objetos/Motor';
-import { MotorElectrico } from '../Objetos/MotorElectrico';
+import { Motor } from "../Objetos/Motor";
+import { MotorElectrico } from "../Objetos/MotorElectrico";
 
 export class MotorElectricoAdapter extends Motor{
     private motorElectrico:MotorElectrico;

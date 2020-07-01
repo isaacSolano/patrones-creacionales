@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { Gestor } from "./Gestor";
 
 @Component({
-	selector: 'app-constructor',
-	templateUrl: './constructor.component.html',
-	styleUrls: ['./constructor.component.scss']
+	selector: "app-constructor",
+	templateUrl: "./constructor.component.html",
+	styleUrls: ["./constructor.component.scss"]
 })
 export class ConstructorComponent implements OnInit {
 
@@ -13,7 +13,7 @@ export class ConstructorComponent implements OnInit {
 	ngOnInit(): void {
 	}
 
-	title = 'Fabrica de Carros | Constructor';
+	title = "Fabrica de Carros | Constructor";
 	carrosDisponibles:any = {
 		"1": "Economico",
 		"2": "Estandar",

@@ -1,4 +1,4 @@
-import { Vehiculo } from '../Producto_Abstracto/Vehiculo';
+import { Vehiculo } from "../Producto_Abstracto/Vehiculo";
 
 export class Bus implements Vehiculo{
     private codigo:Number;
