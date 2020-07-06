@@ -1,8 +1,8 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from "@angular/router";
 
-import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { FabricaAbstractaComponent } from "./fabrica-abstracta/fabrica-abstracta.component";
 import { MetodoFabricaComponent } from "./metodo-fabrica/metodo-fabrica.component";
@@ -10,7 +10,7 @@ import { ConstructorComponent } from "./constructor/constructor.component";
 import { PrototipoComponent } from "./prototipo/prototipo.component";
 import { AdaptadorComponent } from "./adaptador/adaptador.component";
 import { FachadaComponent } from "./fachada/fachada.component";
-import { pathToFileURL } from "url";
+import { PesoLigeroComponent } from './peso-ligero/peso-ligero.component';
 
 const routes = [
   {
@@ -36,6 +36,10 @@ const routes = [
   {
     path: "fachada",
     component: FachadaComponent
+  },
+  {
+    path: "peso-ligero",
+    component: PesoLigeroComponent
   }
 ]
 
@@ -48,11 +52,13 @@ const routes = [
     PrototipoComponent,
     AdaptadorComponent,
     FachadaComponent,
+    PesoLigeroComponent,
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot( routes, {
-      anchorScrolling: "enabled"
+    FormsModule,
+    RouterModule.forRoot(routes, {
+      anchorScrolling: 'enabled'
     })
   ],
   providers: [],

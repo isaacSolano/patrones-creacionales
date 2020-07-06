@@ -1,0 +1,52 @@
+<main class="container">
+	<section class="row my-4">
+		<h1 class="col-md-12 text-center">{{ title }}</h1>
+		<h2 class="col-md-12 text-center">Seleccione el vehiculo que desea registrar</h2>
+	</section>
+
+	<form class="row" #form="ngForm" (ngSubmit)="registrarVehiculo(form)" novalidate>
+		<div class="col-md-6 my-3">
+			<label for="nCedula">Ingrese su numero de cedula:</label>
+			<input id="nCedula" name="nCedula" type="Number" class="form-control" ngModel #cedula="ngModel" required>
+			
+			<small *ngIf="!cedula.value" class="text-danger">* Este campo es requerido</small>
+		</div>
+
+		<div class="col-md-6 my-3">
+			<label for="nPlaca">Ingrese el numero de placa:</label>
+			<input id="nPlaca" name="nPlaca" type="text" class="form-control" ngModel #placa="ngModel" required>
+			<small *ngIf="!placa.value" class="text-danger">* Este campo es requerido</small>
+		</div>
+
+		<div class="col-md-6 my-3">
+			<label for="txtColor">Ingrese el color del vehiculo:</label>
+			<input id="txtColor" name="txtColor" type="text" class="form-control" ngModel #color="ngModel" required>
+			<small *ngIf="!color.value" class="text-danger">* Este campo es requerido</small>
+		</div>
+
+		<div class="col-md-6 my-3 form-check">
+			<label>Seleccione la marca y el modelo:</label>
+
+			<div *ngFor="let marca of marcasDisponibles | keyvalue">
+				<input id="slt{{marca.key}}" name="rdMarca" value={{marca.key}} type="radio" class="mx-3" (click)="seleccionarMarca(marca.key)">
+				<label for="slt{{marca.key}}">{{marca.key}}</label>
+
+				<div *ngFor="let modelo of marca.value" class="ml-4">
+					<input id="slt{{modelo}}" name="rdModelo" value={{modelo}} type="radio" class="mx-3" (click)="seleccionarModelo(modelo)">
+					<label for="slt{{modelo}}">{{modelo}}</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-12 text-center">
+			<button type="submit" class="btn btn-success">Registrar vehiculo</button>
+		</div>
+	</form>
+
+	<ul class="row list-group my-5">
+		<li class="list-group-item text-center" *ngFor="let infoVehiculo of vehiculosIngresados">
+			{{infoVehiculo}}
+		</li>
+	</ul>
+
+</main>

@@ -14,6 +14,7 @@ export class AppComponent {
 		"Metodo Fabrica": "/metodoFabrica",
 		"Prototipo": "/prototipo",
 		"Adaptador": "/adaptador",
-		"Fachada": "/fachada"
+		"Fachada": "/fachada",
+		"Peso Ligero": "/peso-ligero"
 	};
 }
