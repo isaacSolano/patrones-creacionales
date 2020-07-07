@@ -1,0 +1,32 @@
+<main class="container">
+	<section class="row my-4">
+		<h1 class="col-md-12 text-center">{{ title }}</h1>
+		<h2 class="col-md-12 text-center">Seleccione el tipo de persona que desea crear</h2>
+	</section>
+
+	<section class="row">
+		<button class="btn btn-primary col-md-3 mx-auto" *ngFor="let opcion of opcionesDisponibles | keyvalue" (click)="crearPersona(opcion.value)">{{opcion.key}}</button>
+	</section>
+
+	<table class="table my-5 text-center">
+		<thead>
+			<tr>
+				<th>Descripcion</th>
+				<th>Accion</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr *ngFor="let infoPersona of arrInfoPersonasCreadas; index as i">
+				<td>{{infoPersona.info}}</td>
+				<td>
+					<button *ngIf="infoPersona.tipo; else noAccion" class="btn btn-danger" (click)="eliminarDecorador(i)">Eliminar decorador</button>
+				
+					<ng-template #noAccion>
+						<button class="btn btn-success" (click)="decorarPersona(i)">Agregar decorador</button>
+					</ng-template>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</main>

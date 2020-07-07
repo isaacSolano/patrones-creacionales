@@ -1,7 +1,7 @@
 import { MarcaModelo } from '../Objetos/MarcaModelo';
 import { Honda } from '../Objetos/Honda';
 
-import { Helper } from '../Helper';
+import { Helper } from '../../../Helper';
 import { Toyota } from '../Objetos/Toyota';
 import { Nissan } from '../Objetos/Nissan';
 import { DataFactory } from '../DataFactory';

@@ -1,5 +1,5 @@
 import { Vehiculo } from './Peso_Ligero/Objetos/Extrinseco/Vehiculo';
-import { Helper } from './Peso_Ligero/Helper';
+import { Helper } from '../Helper';
 
 export class Gestor{
     private helper:Helper;

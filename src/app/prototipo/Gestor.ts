@@ -2,7 +2,7 @@ import { Camiseta } from "./Prototipo/iPrototipo/Camiseta";
 import { Camiseta_Manga_Corta } from "./Prototipo/Prototipo/Camiseta_Manga_Corta";
 import { Camiseta_Manga_Larga } from "./Prototipo/Prototipo/Camiseta_Manga_Larga";
 
-import { Helper } from "./Helper";
+import { Helper } from "../Helper";
 
 export class Gestor{
     private Id_MangaCorta:any;
@@ -48,8 +48,8 @@ export class Gestor{
     updateClone(pNumero:any, mSerie:Number){
         let clone_camiseta = this.arrCamisetasCreadas[pNumero];
 
-        clone_camiseta.setColor( this.helper.getColor(this.helper.randomize()) );
-        clone_camiseta.setEstampado( this.helper.getEstampado(this.helper.randomize()) );
+        clone_camiseta.setColor( this.helper.getColor(this.helper.randomize(5)) );
+        clone_camiseta.setEstampado( this.helper.getEstampado(this.helper.randomize(5)) );
         clone_camiseta.setNombre(`Camiseta ${clone_camiseta.getColor()}, ${clone_camiseta.getEstampado()} hecha de ${clone_camiseta.getMaterial().getDescripcion()}`);
         clone_camiseta.setSerie(mSerie);
     }

@@ -11,6 +11,7 @@ import { PrototipoComponent } from "./prototipo/prototipo.component";
 import { AdaptadorComponent } from "./adaptador/adaptador.component";
 import { FachadaComponent } from "./fachada/fachada.component";
 import { PesoLigeroComponent } from './peso-ligero/peso-ligero.component';
+import { DecoradorComponent } from './decorador/decorador.component';
 
 const routes = [
   {
@@ -40,6 +41,10 @@ const routes = [
   {
     path: "peso-ligero",
     component: PesoLigeroComponent
+  },
+  {
+    path: "decorador",
+    component: DecoradorComponent
   }
 ]
 
@@ -53,6 +58,7 @@ const routes = [
     AdaptadorComponent,
     FachadaComponent,
     PesoLigeroComponent,
+    DecoradorComponent,
   ],
   imports: [
     BrowserModule,

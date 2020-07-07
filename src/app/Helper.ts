@@ -1,12 +1,23 @@
 export class Helper{
-
     constructor(){}
 
-    randomize():Number{
-        return Math.floor(Math.random() * 5);
+    public alAzar():Array<Number>{
+        return [Math.floor(Math.random() * 5), Math.floor(Math.random() * 5), Math.floor(Math.random() * 5)];
     }
 
-    getColor(pNumero:Number):String{
+    public generarKey(marca:String, modelo:String, color:String):String{
+        return `${marca}-${modelo}-${color}`;
+    }
+
+    public obtenerFecha_Actual():String{
+        return `${new Date().getDate()}/${new Date().getMonth()}/${new Date().getFullYear()}`;
+    }
+
+    public randomize(max:any):Number{
+        return Math.floor(Math.random() * max);
+    }
+
+    public getColor(pNumero:Number):String{
         let color:String = "Blanco";
 
         switch (pNumero){
@@ -34,7 +45,7 @@ export class Helper{
         return color;
     }
 
-    getEstampado(pNumero:Number):String{
+    public getEstampado(pNumero:Number):String{
         let estampado:String = "Lisa";
 
         switch (pNumero){
@@ -62,7 +73,7 @@ export class Helper{
         return estampado;
     }
 
-    getMultipo(numero_1:any, numero_2:any):boolean{
+    public getMultipo(numero_1:any, numero_2:any):boolean{
         return numero_1%numero_2 === 0 ? true : false;
     }
 }

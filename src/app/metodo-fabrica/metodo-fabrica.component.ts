@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Helper } from "./Helper";
+import { Helper } from "../Helper";
 import { Gestor } from "./Gestor";
 
 @Component({
@@ -14,7 +14,7 @@ export class MetodoFabricaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  crearTriangulo:Helper = new Helper();
+  	crearTriangulo:Helper = new Helper();
 	gestor:Gestor = new Gestor();
 
 	title = "Fabrica de triangulos | Metodo Fabrica";

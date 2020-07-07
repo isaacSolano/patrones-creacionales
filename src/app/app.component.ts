@@ -15,6 +15,7 @@ export class AppComponent {
 		"Prototipo": "/prototipo",
 		"Adaptador": "/adaptador",
 		"Fachada": "/fachada",
-		"Peso Ligero": "/peso-ligero"
+		"Peso Ligero": "/peso-ligero",
+		"Decorador": "/decorador"
 	};
 }
