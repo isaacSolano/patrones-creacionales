@@ -12,6 +12,6 @@ export class Isoceles extends Triangulo{
         return 0;
     }
     dibujar():String{
-        return `isoceles.jpg`;
+        return `isoceles.png`;
     }
 }

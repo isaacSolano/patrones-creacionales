@@ -12,6 +12,7 @@ import { AdaptadorComponent } from "./adaptador/adaptador.component";
 import { FachadaComponent } from "./fachada/fachada.component";
 import { PesoLigeroComponent } from './peso-ligero/peso-ligero.component';
 import { DecoradorComponent } from './decorador/decorador.component';
+import { PuenteComponent } from './puente/puente.component';
 
 const routes = [
   {
@@ -45,6 +46,10 @@ const routes = [
   {
     path: "decorador",
     component: DecoradorComponent
+  },
+  {
+    path: "puente",
+    component: PuenteComponent
   }
 ]
 
@@ -59,6 +64,7 @@ const routes = [
     FachadaComponent,
     PesoLigeroComponent,
     DecoradorComponent,
+    PuenteComponent,
   ],
   imports: [
     BrowserModule,

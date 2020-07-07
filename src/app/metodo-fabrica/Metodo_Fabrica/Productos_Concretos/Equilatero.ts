@@ -12,6 +12,6 @@ export class Equilatero extends Triangulo{
         return 0;
     }
     dibujar():String{
-        return `equilatero.jpg`;
+        return `equilatero.png`;
     }
 }
