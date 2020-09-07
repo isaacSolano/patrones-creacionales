@@ -1,0 +1,45 @@
+<main class="container">
+	<section class="row my-4">
+		<h1 class="col-md-12 text-center">{{ title }}</h1>
+		<h2 class="col-md-12 text-center">Seleccione la figura que desea crear</h2>
+    </section>
+    
+    <form class="row py-2" #form="ngForm" (ngSubmit)="registrarEmpleado(form)">
+        <div class="com-md-3 mx-auto">
+            <label for="txtNombre" class="w-25 pr-5">Nombre: </label>
+            <input id="txtNombre" name="txtNombre" type="text" class="form-control w-75 d-inline" ngModel #nombre="ngModel">
+        </div>
+
+        <div class="com-md-3 mx-auto">
+            <label for="nSalario" class="w-25 pr-5">Salario: </label>
+            <input id="nSalario" name="nSalario" type="number" class="form-control w-75 d-inline" ngModel #salario="ngModel">
+        </div>
+
+        <div class="col-md-12 text-center pt-5">
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </div>
+
+        <small class="text-danger mx-auto pt-4">* Cada equipo consta de cinco integrantes maximo</small>
+    </form>
+
+
+    <table class="table text-center my-4">
+        <thead>
+            <tr>
+                <th>Nombre Equipo</th>
+                <th>Nombre Empleado</th>
+                <th>Salario Equipo</th>
+                <th>Salario Empleado</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let empleado of arrInfoEmpleadosCreados">
+                <td>{{ empleado.nombreEquipo }}</td>
+                <td>{{ empleado.nombre }}</td>
+                <td>{{ empleado.salarioTotal }}</td>
+                <td>{{ empleado.salario }}</td>
+            </tr>
+        </tbody>
+    </table>
+</main>

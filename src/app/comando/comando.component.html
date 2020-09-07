@@ -1,0 +1,18 @@
+<main class="container">
+	<section class="row text-center my-4">
+		<h1 class="col-md-12">{{ title }}</h1>
+		<h2 class="col-md-12">Seleccione el producto</h2>
+	</section>
+
+	<section class="row text-center my-4">
+		<button class="btn btn-primary mx-auto col-md-2" *ngFor="let producto of arrProductos" (click)="procesarOpcion(producto.id)">{{ producto.item }}</button>
+	</section>
+
+	<section class="row my-4">
+		<ul class="list-group mx-auto">
+			<li class="list-group-item" *ngFor="let estado of arrEstado">
+				{{ estado }}
+			</li>
+		</ul>
+	</section>
+</main>

@@ -1,0 +1,23 @@
+<main class="container">
+	<section class="row text-center my-4">
+		<h1 class="col-md-12">{{ title }}</h1>
+		<h2 class="col-md-12">Seleccione el elemento</h2>
+	</section>
+
+	<section class="row text-center my-4">
+		<button class="btn btn-primary mx-auto col-md-2" *ngFor="let accion of arrAcciones | keyvalue" (click)="procesarOpcion(accion.key)">{{ accion.value }}</button>
+	</section>
+
+	<section class="row my-4">
+		<ul class="list-group mx-auto">
+			<li class="list-group-item" *ngFor="let elemento of arrElementos | keyvalue">
+                {{ elemento.value.nombre }}
+                <span>
+                    <button class="btn btn-success ml-3" [disabled]="!elemento.value.seleccionado">Seleccionado</button>
+                </span>
+            </li>
+            
+            <small *ngIf="error !== null" class="text-danger my-3">{{ error }}</small>
+		</ul>
+	</section>
+</main>

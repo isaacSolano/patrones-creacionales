@@ -1,0 +1,18 @@
+<main class="container">
+	<section class="row text-center my-4">
+		<h1 class="col-md-12">{{ title }}</h1>
+		<h2 class="col-md-12">Seleccione el comando que desea ejecutar</h2>
+	</section>
+
+	<section class="row text-center my-4">
+		<button class="btn btn-primary mx-auto col-md-2" *ngFor="let orden of arrOrdenes" (click)="procesarOpcion(orden)">{{ orden.orden }}</button>
+	</section>
+
+	<section class="row my-4">
+		<ul class="list-group mx-auto">
+			<li class="list-group-item" *ngFor="let respuesta of arrRespuestas">
+				{{ respuesta }}
+			</li>
+		</ul>
+	</section>
+</main>

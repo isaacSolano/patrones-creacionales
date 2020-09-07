@@ -17,6 +17,12 @@ export class AppComponent {
 		"Fachada": "/fachada",
 		"Peso Ligero": "/peso-ligero",
 		"Decorador": "/decorador",
-		"Puente": "/puente"
+		"Puente": "/puente",
+		"Compositor": "/compositor",
+		"Cadena de Responsabilidad": "/cadenaResponsabilidad",
+		"Comando": "/comando",
+		"Mediador": "/mediador",
+		"Iterador": "/iterador",
+		"Observador": "/observador"
 	};
 }

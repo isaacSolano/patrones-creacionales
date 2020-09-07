@@ -76,4 +76,34 @@ export class Helper{
     public getMultipo(numero_1:any, numero_2:any):boolean{
         return numero_1%numero_2 === 0 ? true : false;
     }
+
+    public getNombreEquipo():String{
+        let numero:Number = this.randomize(5),
+            nombre:String;
+    
+        switch(numero){
+            case 1:
+                nombre = "QA";
+                break;
+
+            case 2:
+                nombre = "Front-End"
+                break;
+
+                
+            case 3:
+                nombre = "Back-End";
+                break;
+
+            case 4:
+                nombre = "DB Admins"
+                break;
+
+            default:
+                nombre = "Disenadores";
+                break;
+        }
+
+        return nombre;
+    }
 }

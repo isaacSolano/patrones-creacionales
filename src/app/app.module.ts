@@ -13,6 +13,12 @@ import { FachadaComponent } from "./fachada/fachada.component";
 import { PesoLigeroComponent } from './peso-ligero/peso-ligero.component';
 import { DecoradorComponent } from './decorador/decorador.component';
 import { PuenteComponent } from './puente/puente.component';
+import { CompositorComponent } from './compositor/compositor.component';
+import { CadenaResponsabilidadComponent } from './cadena-responsabilidad/cadena-responsabilidad.component';
+import { ComandoComponent } from './comando/comando.component';
+import { MediadorComponent } from './mediador/mediador.component';
+import { IteradorComponent } from './iterador/iterador.component';
+import { ObservadorComponent } from './observador/observador.component';
 
 const routes = [
   {
@@ -50,6 +56,30 @@ const routes = [
   {
     path: "puente",
     component: PuenteComponent
+  },
+  {
+    path: "compositor",
+    component: CompositorComponent
+  },
+  {
+    path: "cadenaResponsabilidad",
+    component: CadenaResponsabilidadComponent
+  },
+  {
+    path: "comando",
+    component: ComandoComponent
+  },
+  {
+    path: "mediador",
+    component: MediadorComponent
+  },
+  {
+    path: "iterador",
+    component: IteradorComponent
+  },
+  {
+    path: "observador",
+    component: ObservadorComponent
   }
 ]
 
@@ -65,6 +95,12 @@ const routes = [
     PesoLigeroComponent,
     DecoradorComponent,
     PuenteComponent,
+    CompositorComponent,
+    CadenaResponsabilidadComponent,
+    ComandoComponent,
+    MediadorComponent,
+    IteradorComponent,
+    ObservadorComponent,
   ],
   imports: [
     BrowserModule,
