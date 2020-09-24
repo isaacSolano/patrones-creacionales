@@ -1,0 +1,25 @@
+<main class="container">
+	<section class="row text-center my-4">
+		<h1 class="col-md-12">{{ title }}</h1>
+		<h2 class="col-md-12">Escriba un texto</h2>
+	</section>
+
+    <section class="row my-4">
+        <textarea name="" class="form-control col-md-6 mx-auto" rows="10" (keyup)="procesarTexto($event)" [(ngModel)]="texto" ></textarea>
+    </section>
+
+	<section class="row text-center my-4">
+		<button class="btn btn-primary mx-auto col-md-2" (click)="procesarBorrador()">Guardar borrador</button>
+		<button class="btn btn-primary mx-auto col-md-2" (click)="retrocederBorrador()">Retroceder borrador (ctrl+z)</button>
+    </section>
+    
+    <section class="row">
+        <section class="col-md-6 text-center" *ngFor="let txt of mapTxt | keyvalue">
+            <h3>Texto {{ txt.key }}</h3>
+
+            <p class="pt-3">{{ txt.value.txt }}</p>
+            <small>{{ txt.value.fecha }}</small>
+        </section>
+    </section>
+
+</main>

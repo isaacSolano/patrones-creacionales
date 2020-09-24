@@ -1,0 +1,33 @@
+<main class="container">
+	<section class="row my-4">
+		<h1 class="col-md-12 text-center">{{ title }}</h1>
+		<h2 class="col-md-12 text-center">Seleccione el personaje que desea crear</h2>
+    </section>
+    
+    <section class="row">
+        <button class="btn btn-primary col-md-2 mx-auto" *ngFor="let personaje of arrPersonajes | keyvalue" (click)="crearPersonaje(personaje.key)">{{personaje.value}}</button>
+    </section>
+
+    <section class="row mt-4" *ngIf="arrPersonajesCreados.length!=0;">
+        <button class="btn btn-primary col-md-2 mx-auto" (click)="equipar()">Equipar ejercito</button>
+    </section>
+
+
+    <table class="table text-center my-4">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Nivel</th>
+                <th>Especial</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let personajeCreado of arrPersonajesCreados">
+                <td>{{ personajeCreado.nombre }}</td>
+                <td>{{ personajeCreado.nivel }}</td>
+                <td>{{ personajeCreado.especial }}</td>
+            </tr>
+        </tbody>
+    </table>
+</main>

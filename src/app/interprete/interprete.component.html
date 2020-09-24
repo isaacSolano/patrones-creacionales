@@ -1,0 +1,37 @@
+<main class="container">
+	<section class="row my-4">
+		<h1 class="col-md-12 text-center">{{ title }}</h1>
+		<h2 class="col-md-12 text-center">Seleccione dos numeros y la operacion que desea realizar</h2>
+    </section>
+
+    <section class="row py-4">
+        <select name="primerNumero" class="form-control col-md-4 mx-auto" (change)="procesarNumeros($event)">
+            <option selected>Primer numero</option>
+            <option value="cero">0</option>
+            <option value="uno">1</option>
+            <option value="dos">2</option>
+            <option value="tres">3</option>
+            <option value="cuatro">4</option>
+            <option value="cinco">5</option>
+        </select>
+
+        
+        <select name="segundoNumero" class="form-control col-md-4 mx-auto" (change)="procesarNumeros($event)">
+            <option selected>Segundo numero</option>
+            <option value="cero">0</option>
+            <option value="uno">1</option>
+            <option value="dos">2</option>
+            <option value="tres">3</option>
+            <option value="cuatro">4</option>
+            <option value="cinco">5</option>
+        </select>
+    </section>
+    
+    <section class="row">
+        <button class="btn btn-primary col-md-2 mx-auto" *ngFor="let operacion of arrOperacionesDisponibles" (click)="procesarOperacion(operacion)">{{operacion}}</button>
+    </section>
+
+    <section class="row" [ngClass]="{'text-danger' : err}" class="text-center py-4">
+        <p>{{ resultado }}</p>
+    </section>
+</main>

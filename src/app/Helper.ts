@@ -106,4 +106,30 @@ export class Helper{
 
         return nombre;
     }
+
+    public getMago(max:Number):Object{
+        switch( this.randomize(max) ){
+            case 0:
+                return {nombre: "Alatar", nivel: 5, especial: ""}
+
+            case 1:
+                return {nombre: "Gandalf", nivel: 8, especial: ""}
+                
+            default:
+                return {nombre: "Radagast", nivel: 1, especial: ""}
+        }
+    }
+
+    public getGuerrero(max:Number):Object{
+        switch( this.randomize(max) ){
+            case 0:
+                return {nombre: "Smeagol", nivel: 1, especial: ""}
+                
+            case 1:
+                return {nombre: "Gollum", nivel: 2, especial: ""}
+                
+            default:
+                return {nombre: "Noldo", nivel: 0, especial: ""}
+        }
+    }
 }

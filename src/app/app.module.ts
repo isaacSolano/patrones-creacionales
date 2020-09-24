@@ -19,6 +19,9 @@ import { ComandoComponent } from './comando/comando.component';
 import { MediadorComponent } from './mediador/mediador.component';
 import { IteradorComponent } from './iterador/iterador.component';
 import { ObservadorComponent } from './observador/observador.component';
+import { VisitanteComponent } from './visitante/visitante.component';
+import { InterpreteComponent } from './interprete/interprete.component';
+import { MementoComponent } from './memento/memento.component';
 
 const routes = [
   {
@@ -80,6 +83,18 @@ const routes = [
   {
     path: "observador",
     component: ObservadorComponent
+  },
+  {
+    path: "visitante",
+    component: VisitanteComponent
+  },
+  {
+    path: "interprete",
+    component: InterpreteComponent
+  },
+  {
+    path: "memento",
+    component: MementoComponent
   }
 ]
 
@@ -101,6 +116,9 @@ const routes = [
     MediadorComponent,
     IteradorComponent,
     ObservadorComponent,
+    VisitanteComponent,
+    InterpreteComponent,
+    MementoComponent,
   ],
   imports: [
     BrowserModule,

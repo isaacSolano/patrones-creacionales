@@ -23,6 +23,9 @@ export class AppComponent {
 		"Comando": "/comando",
 		"Mediador": "/mediador",
 		"Iterador": "/iterador",
-		"Observador": "/observador"
+		"Observador": "/observador",
+		"Visitante": "/visitante",
+		"Interprete": "/interprete",
+		"Memento": "/memento"
 	};
 }
