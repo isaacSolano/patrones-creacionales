@@ -26,6 +26,7 @@ export class AppComponent {
 		"Observador": "/observador",
 		"Visitante": "/visitante",
 		"Interprete": "/interprete",
-		"Memento": "/memento"
+		"Memento": "/memento",
+		"Estrategia": "/estrategia"
 	};
 }

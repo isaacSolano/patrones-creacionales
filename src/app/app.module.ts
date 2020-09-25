@@ -22,6 +22,7 @@ import { ObservadorComponent } from './observador/observador.component';
 import { VisitanteComponent } from './visitante/visitante.component';
 import { InterpreteComponent } from './interprete/interprete.component';
 import { MementoComponent } from './memento/memento.component';
+import { EstrategiaComponent } from './estrategia/estrategia.component';
 
 const routes = [
   {
@@ -95,6 +96,10 @@ const routes = [
   {
     path: "memento",
     component: MementoComponent
+  },
+  {
+    path: "estrategia",
+    component: EstrategiaComponent
   }
 ]
 
@@ -119,6 +124,7 @@ const routes = [
     VisitanteComponent,
     InterpreteComponent,
     MementoComponent,
+    EstrategiaComponent,
   ],
   imports: [
     BrowserModule,
