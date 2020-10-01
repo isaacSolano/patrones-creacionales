@@ -20,16 +20,12 @@ export class CuerpoGeometrico {
 
     public establecerCalculoArea():void{
         if( this.circulo() ){
-            console.log("circulo");
             this._estrategia = new Circulo(this.radio);
         }else if( this.triangulo() ){
-            console.log("triangulo");
             this._estrategia = new Triangulo(this.base, this.altura);
         }else if( this.rectangulo() ){
-            console.log("rectangulo");
             this._estrategia = new Rectangulo(this.base, this.altura);
         }else if( this.poligonoRegular() ){
-            console.log("poligono");
             this._estrategia = new Poligono(this.radio, this.lados);
         }else{
             throw new RangeError("No existe una forma de crear esa figura en este sistema");

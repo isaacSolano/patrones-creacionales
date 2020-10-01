@@ -23,6 +23,8 @@ import { VisitanteComponent } from './visitante/visitante.component';
 import { InterpreteComponent } from './interprete/interprete.component';
 import { MementoComponent } from './memento/memento.component';
 import { EstrategiaComponent } from './estrategia/estrategia.component';
+import { EstadoComponent } from './estado/estado.component';
+import { TemplateComponent } from './template/template.component';
 
 const routes = [
   {
@@ -100,6 +102,14 @@ const routes = [
   {
     path: "estrategia",
     component: EstrategiaComponent
+  },
+  {
+    path: "estado",
+    component: EstadoComponent
+  },
+  {
+    path: "template",
+    component: TemplateComponent
   }
 ]
 
@@ -125,6 +135,8 @@ const routes = [
     InterpreteComponent,
     MementoComponent,
     EstrategiaComponent,
+    EstadoComponent,
+    TemplateComponent,
   ],
   imports: [
     BrowserModule,

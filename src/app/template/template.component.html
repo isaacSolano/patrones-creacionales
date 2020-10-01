@@ -1,0 +1,43 @@
+<main class="container">
+	<section class="row my-4">
+		<h1 class="col-md-12 text-center">{{ title }}</h1>
+		<h2 class="col-md-12 text-center">Seleccione su correo y contrasena</h2>
+    </section>
+    
+    <form class="row" #form="ngForm" (ngSubmit)="registrarUsuario(form)">
+        <div class="col-md-4 form-group text-center mx-auto">
+            <label for="txtUsuario">Ingrese su usuario:</label>
+            <input type="text" name="txtUsuario" id="txtUsuario" class="form-control" ngModel>
+            <small class="text-danger">* Campo requerido</small>
+        </div>
+
+        <div class="col-md-4 form-group text-center mx-auto">
+            <label for="txtContrasena">Ingrese su contrasena:</label>
+            <input type="password" name="txtContrasena" id="txtContrasena" class="form-control" ngModel>
+            <small class="text-danger">* Campo requerido</small>
+        </div>
+
+        <div class="col-md-6 text-center mx-auto">
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </div>
+    </form>
+
+    <section *ngIf="showOptions == true">
+        <section class="row">
+            <label class="col-md-6 text-center mx-auto h3 my-4" for="txtMensaje">Ingrese su mensaje: </label>
+            <textarea class="form-control mx-auto col-md-8" name="txtMensaje" id="txtMensaje" rows="10" (input)="guardarMensaje($event)"></textarea>
+        </section>
+        
+        <section class="row my-5">
+            <h3 class="mx-auto">Imprimir mensaje via: </h3>
+        </section>
+        
+        <section class="row">
+            <button class="btn btn-primary mx-auto" *ngFor="let opcion of arrOpciones | keyvalue" (click)="imprimirMensaje(opcion.key)">{{ opcion.value }}</button>
+        </section>
+
+        <section class="row">
+            <p class="text-center mx-auto my-5">{{ respuesta }}</p>
+        </section>
+    </section>
+</main>

@@ -3,9 +3,31 @@
 		<h1 class="py-3 col-md-12 text-center">{{ title }}</h1>
 	</section>
 
+	<section class="row mt-1 mb-5">
+		<h3 class="col-md-4">Patrones Creacionales</h3>
+		<div class="col-md-8">
+			<button class="btn btn-success mx-2 my-1" *ngFor="let patron of arrPatronesCreacionales | keyvalue" [routerLink]="[ patron.value ]">
+				{{ patron.key }}
+			</button>
+		</div>
+	</section>
 
 	<section class="row mt-1 mb-5">
-		<button class="btn btn-primary mx-auto my-1" *ngFor="let patron of patrones | keyvalue" [routerLink]="[ patron.value ]">{{ patron.key }}</button>
+		<h3 class="col-md-4">Patrones Estructurales</h3>
+		<div class="col-md-8">
+			<button class="btn btn-warning mx-2 my-1" *ngFor="let patron of arrPatronesEstructurales | keyvalue" [routerLink]="[ patron.value ]">
+				{{ patron.key }}
+			</button>
+		</div>
+	</section>
+
+	<section class="row mt-1 mb-5">
+		<h3 class="col-md-4">Patrones Comportamiento</h3>
+		<div class="col-md-8">
+			<button class="btn btn-primary mx-2 my-1" *ngFor="let patron of arrPatronesComportamiento | keyvalue" [routerLink]="[ patron.value ]">
+				{{ patron.key }}
+			</button>
+		</div>
 	</section>
 </main>
 
