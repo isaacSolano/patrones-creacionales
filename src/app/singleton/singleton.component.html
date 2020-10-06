@@ -1,0 +1,41 @@
+<main class="container">
+	<section class="row my-4">
+		<h1 class="col-md-12 text-center">{{ title }}</h1>
+		<h2 class="col-md-12 text-center">Ingrese los datos de la conexion</h2>
+    </section>
+
+    <section class="row d-flex flex-row justify-content-between align-items-start">
+        <form class="col-md-4 d-flex justify-content-center flex-column" #form="ngForm" (ngSubmit)="registrarConexion(form)">
+            <div class="form-group mt-4">
+                <label for="txtUrl">Ingrese el enlace: </label>
+                <input type="text" name="txtUrl" id="txtUrl" class="form-control" ngModel>
+                <small class="text-danger">* Este campo es requerido</small>
+            </div>
+
+            <div class="form-group mt-4">
+                <label for="txtNombre">Ingrese el nombre de la base de datos: </label>
+                <input type="text" name="txtNombre" id="txtNombre" class="form-control" ngModel>
+                <small class="text-danger">* Este campo es requerido</small>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-3">
+                Conectar
+            </button>
+
+            <button class="btn btn-danger mt-3" (click)="desconectarse()">
+                Desconectarse
+            </button>
+        </form>
+
+        <section class="col-md-4 d-flex justify-content-center flex-column">
+            <h3>Conexion activa</h3>
+
+            <ul class="list-group text-center mt-3">
+                <li class="list-group-item" *ngFor="let each of arrConexionActiva | keyvalue">
+                    <span class="font-weight-bolder">{{ each.key }}</span> 
+                    <span class="font-italic">{{ each.value }}</span>
+                </li>
+            </ul>
+        </section>
+    </section>
+</main>

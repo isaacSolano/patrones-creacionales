@@ -1,0 +1,18 @@
+<main class="container">
+    <section class="row my-4">
+		<h1 class="col-md-12 text-center">{{ title }}</h1>
+		<h2 class="col-md-12 text-center">Seleccione el acceso que desea</h2>
+    </section>
+
+    <section class="row d-flex flex-row justify-content-around">
+        <button class="btn btn-primary" *ngFor="let acceso of arrAccesos | keyvalue" (click)="procesarAcceso(acceso.key)">
+            {{ acceso.value }}
+        </button>
+    </section>
+
+    <section class="row d-flex flex-column text-justify mt-5 mb-3">
+        <h2>{{ tituloFinal }}</h2>
+        <p class="font-weight-bolder mb-3">{{ subtituloFinal }}</p>
+        <p>{{ cuerpoFinal }}</p>
+    </section>
+</main>

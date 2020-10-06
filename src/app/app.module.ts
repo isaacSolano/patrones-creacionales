@@ -25,6 +25,8 @@ import { MementoComponent } from './memento/memento.component';
 import { EstrategiaComponent } from './estrategia/estrategia.component';
 import { EstadoComponent } from './estado/estado.component';
 import { TemplateComponent } from './template/template.component';
+import { SingletonComponent } from './singleton/singleton.component';
+import { ProxyComponent } from './proxy/proxy.component';
 
 const routes = [
   {
@@ -38,6 +40,10 @@ const routes = [
   {
     path: "prototipo",
     component: PrototipoComponent
+  },
+  {
+    path: "singleton",
+    component: SingletonComponent
   },
   {
     path: "constructor",
@@ -66,6 +72,10 @@ const routes = [
   {
     path: "compositor",
     component: CompositorComponent
+  },
+  {
+    path: "proxy",
+    component: ProxyComponent
   },
   {
     path: "cadenaResponsabilidad",
@@ -137,6 +147,8 @@ const routes = [
     EstrategiaComponent,
     EstadoComponent,
     TemplateComponent,
+    SingletonComponent,
+    ProxyComponent,
   ],
   imports: [
     BrowserModule,

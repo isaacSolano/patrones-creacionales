@@ -13,7 +13,8 @@ export class AppComponent {
 		["Fabrica Abstracta", "/fabricaAbstracta"],
 		["Metodo Fabrica", "/metodoFabrica"],
 		["Constructor", "/constructor"],
-		["Prototipo", "/prototipo"]
+		["Prototipo", "/prototipo"],
+		["Singleton", "/singleton"]
 	]);
 	arrPatronesEstructurales:Map<String, String> = new Map([
 		["Adaptador", "/adaptador"],
@@ -21,7 +22,8 @@ export class AppComponent {
 		["Peso Ligero", "/peso-ligero"],
 		["Decorador", "/decorador"],
 		["Puente", "/puente"],
-		["Compositor", "/compositor"]
+		["Compositor", "/compositor"],
+		["Proxy", "/proxy"]
 
 	]);
 	arrPatronesComportamiento:Map<String, String> = new Map([
