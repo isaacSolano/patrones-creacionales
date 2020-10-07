@@ -5,7 +5,7 @@
 	</section>
 
 	<section class="row">
-		<button class="btn btn-primary mx-auto col-md-2" *ngFor="let cafe of cafesDisponibles | keyvalue" (click)="procesarOpcion(cafe.value)">
+		<button class="btn btn-dark-brown  text-light mx-auto col-md-2" *ngFor="let cafe of cafesDisponibles | keyvalue" (click)="procesarOpcion(cafe.value)">
 			{{ cafe.key }}
 		</button>
 	</section>

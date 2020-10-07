@@ -5,11 +5,11 @@
     </section>
     
     <section class="row">
-        <button class="btn btn-primary col-md-2 mx-auto" *ngFor="let personaje of arrPersonajes | keyvalue" (click)="crearPersonaje(personaje.key)">{{personaje.value}}</button>
+        <button class="btn btn-dark-brown  text-light col-md-2 mx-auto" *ngFor="let personaje of arrPersonajes | keyvalue" (click)="crearPersonaje(personaje.key)">{{personaje.value}}</button>
     </section>
 
     <section class="row mt-4" *ngIf="arrPersonajesCreados.length!=0;">
-        <button class="btn btn-primary col-md-2 mx-auto" (click)="equipar()">Equipar ejercito</button>
+        <button class="btn btn-dark-brown  text-light col-md-2 mx-auto" (click)="equipar()">Equipar ejercito</button>
     </section>
 
 

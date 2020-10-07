@@ -5,7 +5,7 @@
     </section>
 
     <section class="row d-flex flex-row justify-content-around">
-        <button class="btn btn-primary" *ngFor="let acceso of arrAccesos | keyvalue" (click)="procesarAcceso(acceso.key)">
+        <button class="btn btn-dark-brown  text-light" *ngFor="let acceso of arrAccesos | keyvalue" (click)="procesarAcceso(acceso.key)">
             {{ acceso.value }}
         </button>
     </section>

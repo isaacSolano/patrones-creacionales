@@ -28,10 +28,10 @@
     </section>
     
     <section class="row">
-        <button class="btn btn-primary col-md-2 mx-auto" *ngFor="let operacion of arrOperacionesDisponibles" (click)="procesarOperacion(operacion)">{{operacion}}</button>
+        <button class="btn btn-dark-brown  text-light col-md-2 mx-auto" *ngFor="let operacion of arrOperacionesDisponibles" (click)="procesarOperacion(operacion)">{{operacion}}</button>
     </section>
 
-    <section class="row" [ngClass]="{'text-danger' : err}" class="text-center py-4">
+    <section class="row" [ngClass]="{'text-red' : err}" class="text-center py-4">
         <p>{{ resultado }}</p>
     </section>
 </main>

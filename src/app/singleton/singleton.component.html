@@ -9,20 +9,20 @@
             <div class="form-group mt-4">
                 <label for="txtUrl">Ingrese el enlace: </label>
                 <input type="text" name="txtUrl" id="txtUrl" class="form-control" ngModel>
-                <small class="text-danger">* Este campo es requerido</small>
+                <small class="text-red">* Este campo es requerido</small>
             </div>
 
             <div class="form-group mt-4">
                 <label for="txtNombre">Ingrese el nombre de la base de datos: </label>
                 <input type="text" name="txtNombre" id="txtNombre" class="form-control" ngModel>
-                <small class="text-danger">* Este campo es requerido</small>
+                <small class="text-red">* Este campo es requerido</small>
             </div>
 
-            <button type="submit" class="btn btn-primary mt-3">
+            <button type="submit" class="btn btn-dark-brown  text-light mt-3">
                 Conectar
             </button>
 
-            <button class="btn btn-danger mt-3" (click)="desconectarse()">
+            <button class="btn btn-red text-light text-light text-light mt-3" (click)="desconectarse()">
                 Desconectarse
             </button>
         </form>

@@ -1,13 +1,13 @@
 import { Component } from "@angular/core";
-import { Router } from "@angular/router";
 
 @Component({
 	selector: "app-root",
 	templateUrl: "./app.component.html",
 	styleUrls: ["./app.component.scss"]
 })
+
 export class AppComponent {
-	title = "Patrones de diseno";
+	title = "Patrones de diseño";
 
 	arrPatronesCreacionales:Map<String, String> = new Map([
 		["Fabrica Abstracta", "/fabricaAbstracta"],

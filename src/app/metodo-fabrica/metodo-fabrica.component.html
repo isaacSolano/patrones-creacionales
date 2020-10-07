@@ -5,7 +5,7 @@
 	</section>
 
 	<section class="row">
-		<button class="btn btn-primary col-md-2 mx-auto" *ngFor="let triangulo of triangulosDisponibles | keyvalue" (click)="procesarOpcion(triangulo.value)">{{ triangulo.key }}</button>
+		<button class="btn btn-dark-brown  text-light col-md-2 mx-auto" *ngFor="let triangulo of triangulosDisponibles | keyvalue" (click)="procesarOpcion(triangulo.value)">{{ triangulo.key }}</button>
 	</section>
 	
 	<table class="table text-center my-5">

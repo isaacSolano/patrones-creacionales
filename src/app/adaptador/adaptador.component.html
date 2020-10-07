@@ -5,7 +5,7 @@
 	</section>
 
 	<section class="row">
-		<button class="btn btn-primary mx-auto col-md-2" *ngFor="let motor of motoresDisponibles | keyvalue" (click)="procesarOpcion(motor.value)">
+		<button class="btn btn-dark-brown  text-light mx-auto col-md-2" *ngFor="let motor of motoresDisponibles | keyvalue" (click)="procesarOpcion(motor.value)">
 			{{ motor.key }}
 		</button>
 	</section>

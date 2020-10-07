@@ -5,7 +5,7 @@
     </section>
     
     <section class="row">
-        <button class="btn btn-primary col-md-2 mx-auto" *ngFor="let figura of arrFigurasDisponibles" (click)="crearFigura(figura)">{{figura}}</button>
+        <button class="btn btn-dark-brown  text-light col-md-2 mx-auto" *ngFor="let figura of arrFigurasDisponibles" (click)="crearFigura(figura)">{{figura}}</button>
     </section>
 
 
@@ -21,7 +21,7 @@
             <tr *ngFor="let figura of arrInfoFigurasCreadas; index as i">
                 <td>{{ figura }}</td>
                 <td>
-                    <button class="btn btn-primary" (click)="cambiarColor(i)">Cambiar color</button>
+                    <button class="btn btn-dark-brown  text-light" (click)="cambiarColor(i)">Cambiar color</button>
                 </td>
             </tr>
         </tbody>

@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+$brown: #dfd3c3;
+$dark-brown: #c7b198;
+$red: #e58a8a;
+$green: #0be881;
+$yellow: #eccc68;
+$light: #f0ece3;
+$dark: #596e79;
+
+$theme-colors: (
+    "brown": $brown,
+    "dark-brown": $dark-brown,
+    "red": $red,
+    "green": $green,
+    "yellow": $yellow,
+    "light": $light,
+    "dark": $dark,
+);
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+body{
+    background: $light !important;
+    color: $dark !important;
+    
+    background-image: url(./assets/background_bottom.png), url(./assets/background_top.png) !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+    background-position: right bottom, left top !important;
+}
+
+table{
+    color: $dark !important;
+}
+
+ul>li, input, select, textarea{
+    background-color: transparent !important;
+}
+
+::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: $dark-brown;
+}

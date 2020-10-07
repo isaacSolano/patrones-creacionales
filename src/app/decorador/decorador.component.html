@@ -5,7 +5,7 @@
 	</section>
 
 	<section class="row">
-		<button class="btn btn-primary col-md-3 mx-auto" *ngFor="let opcion of opcionesDisponibles | keyvalue" (click)="crearPersona(opcion.value)">{{opcion.key}}</button>
+		<button class="btn btn-dark-brown  text-light col-md-3 mx-auto" *ngFor="let opcion of opcionesDisponibles | keyvalue" (click)="crearPersona(opcion.value)">{{opcion.key}}</button>
 	</section>
 
 	<table class="table my-5 text-center">
@@ -20,10 +20,10 @@
 			<tr *ngFor="let infoPersona of arrInfoPersonasCreadas; index as i">
 				<td>{{infoPersona.info}}</td>
 				<td>
-					<button *ngIf="infoPersona.tipo; else noAccion" class="btn btn-danger" (click)="eliminarDecorador(i)">Eliminar decorador</button>
+					<button *ngIf="infoPersona.tipo; else noAccion" class="btn btn-red text-light text-light text-light" (click)="eliminarDecorador(i)">Eliminar decorador</button>
 				
 					<ng-template #noAccion>
-						<button class="btn btn-success" (click)="decorarPersona(i)">Agregar decorador</button>
+						<button class="btn btn-green text-light" (click)="decorarPersona(i)">Agregar decorador</button>
 					</ng-template>
 				</td>
 			</tr>
